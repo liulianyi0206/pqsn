@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>排球少年网站</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    
+</head>
+<style>
+    body {
+        margin-bottom: 50px; /* 留出页脚的空间 */
+    }
+    footer {
+        text-align: center; 
+        position: fixed;
+        bottom: 0%;
+        width: 100%;
+        height: 20px; /* 页脚高度 */
+        background-color:rgb(137, 131, 131) /* 页脚背景色 */
+    }
+</style>
+
+<body>
+   
+    <header>
+        <h1>排球少年网站</h1>
+        
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="characters.html">球队介绍</a></li>
+                <li><a href="videos.html">精彩视频</a></li>
+                <li><a href="merch.html">排球少年周边</a></li>
+                <li><a href="message.html">留言板</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>首页</h2>
+            <h1>故事介绍</h1>
+            <h4>《排球少年！！》为日本漫画家古馆春一以高中排球为主题的漫画，2012年至2020年期间于《周刊少年JUMP》连载。古馆春一出身于岩手县，不过故事背景则设定在宫城县仙台市，因为古馆春一高中毕业后，就读仙台市的仙台设计专门学校，对周遭环境格外了解，古馆出道前就非常想画一部以排球为主的漫画.</h4>
+
+            <img src="images/11.jpg" alt="排球少年图片">
+            <h4>《排球少年！！》剧情里提到的排球比赛，如全日本中学校排球选手权大会、全日本排球高等学校选手权大会（春高排球赛）、全国高等学校综合体育大会排球竞技大会（IH预赛）都是实际存在的比赛。虽然某些运动描写上偶有夸大之处，但基本上皆以现实比赛中会使用的战术与技术，故事中的主角们也并非一开始就很强，而是经过一步步训练才逐渐成长，让读者们更能对主角们的遭遇有共感，剧情不时会穿插的排球规则与解说，也让对排球不熟悉的读者便于阅读。</h4>
+            <body>
+                <div class="slideshow-container" id="slideshow-container">
+                    <!-- 图片将通过JavaScript动态添加到这里 -->
+                </div>
+            
+                <script src="scripts.js"></script>
+            </body>
+        </section>
+    </main>
+
+    <aside class="sidebar">
+        <ul>
+            
+            <li><a href="index.html">首页</a></li>
+            <li><a href="characters.html">球队介绍</a></li>
+            <li><a href="videos.html">精彩视频</a></li>
+            <li><a href="merch.html">排球少年周边</a></li>
+            <li><a href="message.html">留言板</a></li>
+        </ul>
+    </aside>
+    <audio controls autoplay loop>
+        <source src="FLY_HIGH!!-BURNOUT_SYNDROMES-檸檬.m4a" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    
+    <footer>
+        <p>© 2024 排球少年网站版权所有</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

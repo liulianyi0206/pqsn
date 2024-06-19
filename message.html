@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>留言板</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+    
+</head>
+<body>
+    <header>
+        <h1>排球少年网站</h1>
+        
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="characters.html">球队介绍</a></li>
+                <li><a href="videos.html">精彩视频</a></li>
+                <li><a href="merch.html">排球少年周边</a></li>
+                <li><a href="message.html">留言板</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>留言板</h2>
+        <form id="messageForm" action="submit_form.php" method="POST">
+            <div class="form-group">
+                <label for="name">姓名:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="contact">联系方式:</label>
+                <input type="text" id="contact" name="contact" required>
+            </div>
+            <div class="form-group">
+                <label for="email">电子邮件:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">留言:</label>
+                <textarea id="message" name="message" rows="5"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">提交</button>
+            </div>
+        </form>
+    </div>
+
+    
+    <script>
+        document.getElementById('messageForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+            
+            // Get form values
+            var name = document.getElementById('name').value;
+            var contact = document.getElementById('contact').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            // Display a success message with submitted data
+            var submitMessage = '提交成功！以下是您的信息：\n\n';
+            submitMessage += '姓名: ' + name + '\n';
+            submitMessage += '联系方式: ' + contact + '\n';
+            submitMessage += '电子邮件: ' + email + '\n';
+            submitMessage += '留言: ' + message;
+
+            alert(submitMessage);
+            document.getElementById('messageForm').reset();
+            // Optional: You can also reset the form after submission
+            // document.getElementById('messageForm').reset();
+        });
+    </script>
+</body>
+</html>

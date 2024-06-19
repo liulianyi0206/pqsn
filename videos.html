@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>排球少年网站</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin-bottom: 70px; /* 留出页脚的空间 */
+        }
+        footer {
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 20px; /* 页脚高度 */
+            background-color: rgb(137, 131, 131); /* 页脚背景色 */
+        }
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin: 20px;
+        }
+        .video-item {
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            position: relative;
+        }
+        .video-item video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .control-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            cursor: pointer;
+            display: none; /* 默认隐藏控制按钮 */
+        }
+        .video-item:hover .control-btn {
+            display: block; /* 鼠标悬停时显示控制按钮 */
+        }
+        .editable-text {
+            margin-top: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 5px;
+            border: 1px solid #ccc;
+            resize: vertical; /* 允许垂直调整大小 */
+            color: black; /* 设置文字颜色为黑色 */
+            font-size: 14px; /* 设置文字大小 */
+            background-color: white; /* 设置背景颜色 */
+        }
+        .editable-div {
+            margin-top: 10px;
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            background-color: white;
+            color: black; /* 设置文字颜色为黑色 */
+            font-size: 14px; /* 设置文字大小 */
+            min-height: 50px; /* 设置最小高度 */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>排球少年网站</h1>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="characters.html">球队介绍</a></li>
+                <li><a href="videos.html">精彩视频</a></li>
+                <li><a href="merch.html">排球少年周边</a></li>
+                <li><a href="message.html">留言板</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="video-grid">
+        <div class="video-item">
+            <video id="及川彻" src="videos/及川彻.mp4" controls></video>
+            <button class="control-btn" onclick="toggleVideo('及川彻')">Play/Pause</button>
+            <textarea class="editable-text" placeholder="及川彻"></textarea>
+        </div>
+        <div class="video-item">
+            <video id="天童觉" src="videos/天童觉.mp4" controls></video>
+            <button class="control-btn" onclick="toggleVideo('天童觉')">Play/Pause</button>
+            <textarea class="editable-text" placeholder="天童觉"></textarea>
+        </div>
+        <div class="video-item">
+            <video id="宫侑宫治" src="videos/宫侑宫治.mp4" controls></video>
+            <button class="control-btn" onclick="toggleVideo('宫侑宫治')">Play/Pause</button>
+            <textarea class="editable-text" placeholder="宫侑宫治"></textarea>
+        </div>
+        <div class="video-item">
+            <video id="日向翔阳" src="videos/日向翔阳.mp4" controls></video>
+            <button class="control-btn" onclick="toggleVideo('日向翔阳')">Play/Pause</button>
+            <textarea class="editable-text" placeholder="日向翔阳"></textarea>
+        </div>
+        <div class="video-item">
+            <video id="白鸟泽" src="videos/白鸟泽.mp4" controls></video>
+            <button class="control-btn" onclick="toggleVideo('白鸟泽')">Play/Pause</button>
+            <textarea class="editable-text" placeholder="白鸟泽"></textarea>
+        </div>
+        <div class="video-item">
+            <video id="精彩剪辑" src="videos/精彩剪辑.mp4" controls></video>
+            <button class="control-btn" onclick="toggleVideo('精彩剪辑')">Play/Pause</button>
+            <textarea class="editable-text" placeholder="精彩剪辑"></textarea>
+        </div>
+        <div class="video-item">
+            <video id="精彩视频" src="videos/精彩视频.mp4" controls></video>
+            <button class="control-btn" onclick="toggleVideo('精彩视频')">Play/Pause</button>
+            <textarea class="editable-text" placeholder="精彩视频"></textarea>
+        </div>
+        <div class="video-item">
+            <video id="西谷夕" src="videos/西谷夕.mp4" controls></video>
+            <button class="control-btn" onclick="toggleVideo('西谷夕')">Play/Pause</button>
+            <textarea class="editable-text" placeholder="西谷夕"></textarea>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy;© 2024 排球少年网站版权所有</p>
+    </footer>
+
+    <script>
+        function toggleVideo(videoId) {
+            const video = document.getElementById(videoId);
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+body {
+    margin-bottom: 70px; /* 留出页脚的空间 */
+}
+
+
+.main-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.main-nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgb(240, 240, 240); /* 商品卡片区域背景色 */
+}
+
+.product-card {
+    background-color: white; /* 商品卡片背景色 */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-weight: bold;
+    color: rgb(255, 102, 0); /* 商品价格文本颜色 */
+}
